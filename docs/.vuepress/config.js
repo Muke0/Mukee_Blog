@@ -1,6 +1,6 @@
 module.exports = {
     head: [
-        ['link', { rel: 'icon', href: '/icon.jpg' }]
+        ['link', { rel: 'icon', href: '/logo/icon.jpg' }]
     ],
     themeConfig: {
         //base: 1,
