@@ -1,10 +1,11 @@
 module.exports = {
+    head: [
+        ['link', { rel: 'icon', href: '/icon.jpg' }]
+    ],
     themeConfig: {
-        head: [
-            'link', { rel: 'icon', href: '/logo/icon.jpg' }
-        ],
         //base: 1,
-        logo: '/logo/icon.jpg',
+        //port: 8086,
+        logo: '/logo/唐海音.jpg',
         nav: [
             { text: 'Home', link: '/' },
             { text: '友链', link: '/blogroll/' }
