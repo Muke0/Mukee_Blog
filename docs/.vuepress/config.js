@@ -16,11 +16,11 @@ module.exports = {
             },
             {
                 text: '开发相关',
-                items: [ /*{ text: 'pikachu靶场笔记', link: '/0secure/pikachu/' }, */ ]
+                items: [{ text: 'pikachu靶场笔记', link: '/0secure/pikachu/' }, ]
             },
             {
                 text: '运维相关',
-                items: [ /*{ text: 'pikachu靶场笔记', link: '/0secure/pikachu/' }, */ ]
+                items: [{ text: 'pikachu靶场笔记', link: '/0secure/pikachu/' }, ]
             },
             {
                 text: '靶场',
