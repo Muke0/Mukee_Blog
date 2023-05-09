@@ -14,15 +14,24 @@ module.exports = {
                     { text: '74cms', link: '/0secure/74cms/' },
                 ]
             },
-            { text: '友链', link: '/blogroll/' },
+            {
+                text: '开发相关',
+                items: [ /*{ text: 'pikachu靶场笔记', link: '/0secure/pikachu/' }, */ ]
+            },
+            {
+                text: '运维相关',
+                items: [ /*{ text: 'pikachu靶场笔记', link: '/0secure/pikachu/' }, */ ]
+            },
             {
                 text: '靶场',
+                link: '/0secure/',
                 items: [{ text: 'pikachu', link: 'http://www.mukee.ltd:90' },
                     { text: '74cms', link: 'http://www.mukee.ltd:91' },
                     { text: 'xdcms', link: 'http://www.mukee.ltd:92' },
                     { text: '订单系统', link: 'http://www.mukee.ltd:93' }
                 ]
-            }
+            },
+            { text: '友链', link: '/blogroll/' }
         ],
         lastUpdated: 'Last Updated'
     }
