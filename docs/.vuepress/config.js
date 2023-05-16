@@ -20,7 +20,10 @@ module.exports = {
             },
             {
                 text: '运维相关',
-                items: [{ text: 'pikachu靶场笔记', link: '/0secure/pikachu/' }, ]
+                items: [{ text: 'Linux服务器', link: '/2ops/linux_server/command.md' },
+                    { text: 'nginx', link: '/2ops/nginx/concept.md' },
+                    { text: 'docker', link: '/2ops/docker/concept.md' },
+                ]
             },
             {
                 text: '靶场',
@@ -33,6 +36,8 @@ module.exports = {
             },
             { text: '友链', link: '/blogroll/' }
         ],
+        sidebar: require('./sidebar'),
+        sidebarDepth: 2,
         lastUpdated: 'Last Updated'
     }
 }
