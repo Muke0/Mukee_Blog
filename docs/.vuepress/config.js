@@ -16,7 +16,7 @@ module.exports = {
             },
             {
                 text: '开发相关',
-                items: [{ text: 'pikachu靶场笔记', link: '/0secure/pikachu/' }, ]
+                items: [{ text: 'sql', link: '/1dev/sql/command' }, ]
             },
             {
                 text: '运维相关',

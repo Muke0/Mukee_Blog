@@ -1,6 +1,6 @@
 # sql命令
 |  命令 | 语法 | 作用 | 
-| :---- | ----: || ----: |
+| :---- | :----| :---- |
 |SELECT|SELECT column FROM table_name (WHERE )|查找|
 |INSERT INTO|	INSERT INTO table_name VALUES (value1, value2, value3,....) or INSERT INTO table_name (column1, column2, column3,...) VALUES (value1, value2, value3,....)|插入|
 |UPDATE|UPDATE table_name SET column1=value, column2=value,... WHERE some_column=some_value|更新|
