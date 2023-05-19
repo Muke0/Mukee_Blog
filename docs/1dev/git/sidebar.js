@@ -1,4 +1,4 @@
 module.exports = [{
-    title: 'sql命令',
-    path: '/1dev/sql/command',
+    title: 'git命令',
+    path: '/1dev/git/command',
 }, ]
