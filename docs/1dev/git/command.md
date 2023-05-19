@@ -1,12 +1,12 @@
 # git命令
-|  命令 | 语法 | 作用 | 
-| :---- | :----| :---- |
-|SELECT|SELECT column FROM table_name (WHERE )|查找|
-|INSERT INTO|	INSERT INTO table_name VALUES (value1, value2, value3,....) or INSERT INTO table_name (column1, column2, column3,...) VALUES (value1, value2, value3,....)|插入|
-|UPDATE|UPDATE table_name SET column1=value, column2=value,... WHERE some_column=some_value|更新|
-|DELETE|DELETE FROM table_name WHERE some_column=some_value|删除|
-|SELECT DISTINCT|SELECT DISTINCT column1, column2, ... FROM table_name;|查找唯一不同的值|
-|SELECT LIMIT|SELECT column_name(s) FROM table_name LIMIT number;|规定要返回的记录的数目|
+|  命令 | 作用 | 
+| :---- | :---- |
+|git init|初始化仓库|
+|git clone|复制仓库|
+|git add|添加跟踪文件|
+|git commit -m ""|提交更改，并注释|
+|git status|检查当前状态|
+|git rm|删除文件|
 # git ssh连接
 ```shell
 ssh-keygen -t rsa -C "youremail@example.com" #先在终端生成ssh密钥
