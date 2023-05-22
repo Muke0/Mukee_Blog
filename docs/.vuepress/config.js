@@ -18,6 +18,7 @@ module.exports = {
                 text: '开发相关',
                 items: [{ text: 'sql', link: '/1dev/sql/command' },
                     { text: 'git', link: '/1dev/git/command' },
+                    { text: 'go', link: '/1dev/go/concept' },
                 ]
             },
             {
@@ -25,6 +26,7 @@ module.exports = {
                 items: [{ text: 'Linux服务器', link: '/2ops/linux_server/command.md' },
                     { text: 'nginx', link: '/2ops/nginx/concept.md' },
                     { text: 'docker', link: '/2ops/docker/concept.md' },
+                    { text: 'shell', link: '/2ops/docker/command.md' },
                 ]
             },
             {
