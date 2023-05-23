@@ -6,8 +6,8 @@ features:
 - title: 网络安全
   details: 暴力破解，xss，sql注入
 - title: 开发相关
-  details: nodejs
+  details: git,go,sql
 - title: 运维相关
-  details: nginx,docker
+  details: nginx,docker,shell,虚拟机,k8s
 ---
 [浙ICP备2022032140号](https://beian.miit.gov.cn/)

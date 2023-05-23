@@ -27,6 +27,8 @@ module.exports = {
                     { text: 'nginx', link: '/2ops/nginx/concept.md' },
                     { text: 'docker', link: '/2ops/docker/concept.md' },
                     { text: 'shell', link: '/2ops/shell/command.md' },
+                    { text: '虚拟机', link: '/2ops/virtual_machine/problem.md' },
+                    { text: 'k8s', link: '/2ops/k8s/concept.md' },
                 ]
             },
             {
