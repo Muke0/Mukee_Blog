@@ -84,6 +84,8 @@ less -s #显示连续空行为一行
 |向上键|向上翻动一行|
 |向下键|向下翻动一行|
 
+## vmstat
+监视linux系统状态
 ## nginx常用命令
 ```shell
 nginx -h #帮助

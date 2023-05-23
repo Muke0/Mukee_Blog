@@ -26,7 +26,7 @@ module.exports = {
                 items: [{ text: 'Linux服务器', link: '/2ops/linux_server/command.md' },
                     { text: 'nginx', link: '/2ops/nginx/concept.md' },
                     { text: 'docker', link: '/2ops/docker/concept.md' },
-                    { text: 'shell', link: '/2ops/docker/command.md' },
+                    { text: 'shell', link: '/2ops/shell/command.md' },
                 ]
             },
             {
