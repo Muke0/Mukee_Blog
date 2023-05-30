@@ -4,6 +4,8 @@
 ```
 set可以查看当前内存中已经定义和载入的函数
 unset可以清除
+
+## grep sort cut > |
 ``` shell
 #输出每行末尾为Y的
 grep "^.*Y" customers > /home/shiyanlou/vip
@@ -21,4 +23,11 @@ cut -d \; -f 2 ~/04/uniqcustomers | sort > email
 grep "^.*NB;Y" ~/04/uniqcustomers | cut -d \; -f 2 | sort > vip_email
 #删除空行和注释行
 grep -v "^#" sshd_config | grep -v "^$" > ~/sshd_config.bak
+```
+
+## 用户管理
+``` shell
+sudo adduser lilei #创建用户
+sudo passwd lilei #设置密码
+groups shiyanlou #查看用户组
 ```

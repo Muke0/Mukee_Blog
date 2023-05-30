@@ -338,6 +338,183 @@ func isEquals(name, input string) (bool, error) {
 }
 
 ```
-## 字符串工具
+## 字符串操作
 ``` go
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+func main() {
+	a := "hello"
+	fmt.Println(strings.Contains(a, "ll"))                // true
+	fmt.Println(strings.Count(a, "l"))                    // 2
+	fmt.Println(strings.HasPrefix(a, "he"))               // true
+	fmt.Println(strings.HasSuffix(a, "llo"))              // true
+	fmt.Println(strings.Index(a, "ll"))                   // 2
+	fmt.Println(strings.Join([]string{"he", "llo"}, "-")) // he-llo
+	fmt.Println(strings.Repeat(a, 2))                     // hellohello
+	fmt.Println(strings.Replace(a, "e", "E", -1))         // hEllo
+	fmt.Println(strings.Split("a-b-c", "-"))              // [a b c]
+	fmt.Println(strings.ToLower(a))                       // hello
+	fmt.Println(strings.ToUpper(a))                       // HELLO
+	fmt.Println(len(a))                                   // 5
+	b := "你好"
+	fmt.Println(len(b)) // 6
+}
+```
+
+## 字符串格式化
+``` go
+package main
+
+import "fmt"
+
+type point struct {
+	x, y int
+}
+
+func main() {
+	s := "hello"
+	n := 123
+	p := point{1, 2}
+	fmt.Println(s, n) // hello 123
+	fmt.Println(p)    // {1 2}
+
+	fmt.Printf("s=%v\n", s)  // s=hello
+	fmt.Printf("n=%v\n", n)  // n=123
+	fmt.Printf("p=%v\n", p)  // p={1 2}
+	fmt.Printf("p=%+v\n", p) // p={x:1 y:2}
+	fmt.Printf("p=%#v\n", p) // p=main.point{x:1, y:2}
+
+	f := 3.141592653
+	fmt.Println(f)          // 3.141592653
+	fmt.Printf("%.2f\n", f) // 3.14
+}
+
+```
+
+## JSON处理
+```go
+package main
+
+import (
+	"encoding/json"
+	"fmt"
+)
+
+type userInfo struct {
+	Name  string
+	Age   int `json:"age"`
+	Hobby []string
+}
+
+func main() {
+	a := userInfo{Name: "wang", Age: 18, Hobby: []string{"Golang", "TypeScript"}}
+	buf, err := json.Marshal(a)
+	if err != nil {
+		panic(err)
+	}
+	fmt.Println(buf)         // [123 34 78 97...]
+	fmt.Println(string(buf)) // {"Name":"wang","age":18,"Hobby":["Golang","TypeScript"]}
+
+	buf, err = json.MarshalIndent(a, "", "\t")
+	if err != nil {
+		panic(err)
+	}
+	fmt.Println(string(buf))
+
+	var b userInfo
+	err = json.Unmarshal(buf, &b)
+	if err != nil {
+		panic(err)
+	}
+	fmt.Printf("%#v\n", b) // main.userInfo{Name:"wang", Age:18, Hobby:[]string{"Golang", "TypeScript"}}
+}
+
+```
+
+## 时间处理
+```go
+package main
+
+import (
+	"fmt"
+	"time"
+)
+
+func main() {
+	now := time.Now()
+	fmt.Println(now) // 2022-03-27 18:04:59.433297 +0800 CST m=+0.000087933
+	t := time.Date(2022, 3, 27, 1, 25, 36, 0, time.UTC)
+	t2 := time.Date(2022, 3, 27, 2, 30, 36, 0, time.UTC)
+	fmt.Println(t)                                                  // 2022-03-27 01:25:36 +0000 UTC
+	fmt.Println(t.Year(), t.Month(), t.Day(), t.Hour(), t.Minute()) // 2022 March 27 1 25
+	fmt.Println(t.Format("2006-01-02 15:04:05"))                    // 2022-03-27 01:25:36
+	diff := t2.Sub(t)
+	fmt.Println(diff)                           // 1h5m0s
+	fmt.Println(diff.Minutes(), diff.Seconds()) // 65 3900
+	t3, err := time.Parse("2006-01-02 15:04:05", "2022-03-27 01:25:36")
+	if err != nil {
+		panic(err)
+	}
+	fmt.Println(t3 == t)    // true
+	fmt.Println(now.Unix()) // 1683795669
+}
+
+```
+
+## 数字解析
+```go
+package main
+
+import (
+	"fmt"
+	"strconv"
+)
+
+func main() {
+	f, _ := strconv.ParseFloat("1.234", 64)
+	fmt.Println(f) // 1.234
+
+	n, _ := strconv.ParseInt("111", 10, 64)
+	fmt.Println(n) // 111
+
+	n, _ = strconv.ParseInt("0x1000", 0, 64)
+	fmt.Println(n) // 4096
+
+	n2, _ := strconv.Atoi("123")
+	fmt.Println(n2) // 123
+
+	n2, err := strconv.Atoi("AAA")
+	fmt.Println(n2, err) // 0 strconv.Atoi: parsing "AAA": invalid syntax
+}
+
+```
+
+## 进程信息
+```go
+package main
+
+import (
+	"fmt"
+	"os"
+	"os/exec"
+)
+
+func main() {
+	// go run example/20-env/main.go a b c d
+	fmt.Println(os.Args)           // [/var/folders/8p/n34xxfnx38dg8bv_x8l62t_m0000gn/T/go-build3406981276/b001/exe/main a b c d]
+	fmt.Println(os.Getenv("PATH")) // /usr/local/go/bin...
+	fmt.Println(os.Setenv("AA", "BB"))
+
+	buf, err := exec.Command("grep", "127.0.0.1", "/etc/hosts").CombinedOutput()
+	if err != nil {
+		panic(err)
+	}
+	fmt.Println(string(buf)) // 127.0.0.1       localhost
+}
+
 ```
