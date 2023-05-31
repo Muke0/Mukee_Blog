@@ -1,9 +1,9 @@
 
 ## 并发概念及语法
 ### 协程和线程
-协程：用户态，轻量级线程，栈KB级别
-线程：内核态，线程跑多个协程，栈MB级别
-例子
+协程：用户态，轻量级线程，栈KB级别 
+线程：内核态，线程跑多个协程，栈MB级别 
+例子 
 ```go
 package main
 
@@ -31,12 +31,12 @@ func main() {
 ```
 ### CSP(Communicating Sequential Processes)
 ![CSP](/1dev/go/CSP.png "CSP")
-go提倡通过通信共享内存，而不是通过共享内存而实现通信
+go提倡通过通信共享内存，而不是通过共享内存而实现通信 
 
 ### Channel
-make(chan 元素类型,[缓冲大小])
-无缓冲通道 make(chan int)
-有缓冲通道 make(chan int,2)
+make(chan 元素类型,[缓冲大小]) 
+无缓冲通道 make(chan int) 
+有缓冲通道 make(chan int,2) 
 ```go
 func CalSquare() {
 	src := make(chan int)     //无缓冲队列
@@ -97,10 +97,10 @@ func Add() {
 ```
 
 ### WaitGroup
-暴露三个方法
-Add(delta int) 计数器+delta
-Done() 计数器-1
-Wait(阻塞直到计数器为0)
+暴露三个方法 
+Add(delta int) 计数器+delta 
+Done() 计数器-1 
+Wait(阻塞直到计数器为0) 
 ```go
 func ManyGoWait() {
 	var wg sync.WaitGroup
