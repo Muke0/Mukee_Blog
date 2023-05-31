@@ -18,7 +18,7 @@ module.exports = {
                 text: '开发相关',
                 items: [{ text: 'sql', link: '/1dev/sql/command' },
                     { text: 'git', link: '/1dev/git/command' },
-                    { text: 'go', link: '/1dev/go/concept' },
+                    { text: 'go', link: '/1dev/go/01concept' },
                 ]
             },
             {
