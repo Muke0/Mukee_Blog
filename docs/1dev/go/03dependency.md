@@ -82,5 +82,5 @@ go get example.org/pkg
 @master 分支最新的commit 
 
 #### go mod
-go mod init/donload/tidy 
+go mod init/download/tidy 
 初始化，创建go.mod文件/下载模块到本地缓存/增加需要的依赖，删除不需要的依赖 
