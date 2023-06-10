@@ -209,9 +209,21 @@ func TestMain(m *testing.M) {
 ```
 ![benchmark_1](/1dev/go/benchmark_1.png "benchmark_1")
 并行情况下性能较差，原因：Select用到了rand函数，该函数为了保证全局随机性和并发安全，持有全局锁 
-为了解决随机函数的性能问题，采用fastrand函数，地址：https//github.com/byteDance/gopkg
+为了解决随机函数的性能问题，采用fastrand函数，地址：https//github.com/byteDance/gopkg 
+fastrand 牺牲了随机数列的一致性
 ```go
 func FastSelect() int {
     return ServerIndex[fastrand.Intn(10)]
+}
+```
+```go
+func BenchmarkFastSelectParallel(b *testing.B) {
+	InitServerIndex()
+	b.ResetTimer()
+	b.RunParallel(func(pb *testing.PB) {
+		for pb.Next() {
+			FastSelect()//修改位置
+		}
+	})
 }
 ```

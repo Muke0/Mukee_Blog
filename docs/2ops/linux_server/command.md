@@ -84,6 +84,25 @@ less -s #显示连续空行为一行
 |向上键|向上翻动一行|
 |向下键|向下翻动一行|
 
+## 用户和组管理
+``` shell
+userdel -r guest2 #将用户和用户目录同时删除
+usermod guest1 -u 2000 -d /tmp/tempuser -g guest #将guest1用户的uid改成2000，并将guest用户组作为其主用户组，同时创建目录/tmp/tempuser作为guest1的家目录
+groupadd guest #创建guest用户组
+useradd -d /home/vsftpduser -s /usr/sbin/nologin vsftpduser #创建虚拟用户vsftpduser,创建目录/home/vsftpduser目录作为vsftpduser的家目录
+chown -R vsftpduser:vsftpduser /home/vsftpduser #将/home/vsftpduser的所属用户改为vsftpduser,所属用户组改为vsftpduser组
+chmod -R 744 /home/vsftpduser #将权限修改为只有vsftpduser有完整权限，组用户和其他用户只有读权限 rwx
+
+useradd -g projectx dev #添加用户dev，属于projectx用户组
+sudo chown -R dev:projectx /srv/projectx #将/srv/projectx目录的所属用户改为dev，所属用户组改为/srv/projectx
+
+grep 'bash$' /etc/passwd | cut -d ":" -f 1,3 > ~/users.txt #将当前系统中所有使用bash作为默认shell的可登录用户，提取用户名和uid，保存到当前用户加目录下的users.txt文件中
+
+sudo su #切换到root
+passwd stu #给stu改密码
+usermod -p #使用这种方式，修改的是加密后的密码，所以无法登录
+```
+
 ## vmstat
 监视linux系统状态
 ## nginx常用命令

@@ -21,3 +21,12 @@ git remote rm origin
 git remote add origin git@github.com:Muke0/Mukee_Blog.git  
 ```
 ssh连接建立成功
+# .git目录结构
+HEAD 指向分支 
+config 配置文件 
+hooks 
+objects 存储文件信息 
+refs 存储分支信息
+# 常见git配置 
+用户名配置 git config --global user.name "" git config --global user.email ""
+git remote -v 查看git remote配置 

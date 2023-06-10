@@ -87,3 +87,55 @@ do
     fi
 done
 ```
+```shell
+#!/bin/bash
+if [$1>15]; then
+    exit
+fi
+n=$1
+result=1
+for ((var=1;var<=n;var++))
+do
+    result=$[result*var]
+done
+echo $result
+```
+```shell
+#!/bin/bash
+n=$1
+if [n>10]; then
+    exit
+fi
+i=1
+while [ $i -le $n ]
+do
+    j=1
+    while [ $j -le $i ]
+    do
+        f=$[i-1]
+        g=$[j-1]
+        if [ $j -eq $i ] || [ $j -eq 1 ]; then
+            declare SUM_${i}_$j=1
+        else
+            declare A=$[SUM_${f}_$j]
+            declare B=$[SUM_${f}_$g]
+            declare SUM_${i}_$j=`expr $A + $B`
+        fi
+        echo -en $[SUM_${i}_$j]
+        let j++
+    done
+    echo
+    let i++
+done
+```
+```shell
+#!/bin/bash
+mark='>'
+for ((ratio=0;${ratio}<=100;ratio+=5))
+do
+        sleep 0.2
+        printf "progress:[%-40s]%d%%\r" "${mark}" "${ratio}"
+        mark="==${mark}"
+done
+echo
+```
