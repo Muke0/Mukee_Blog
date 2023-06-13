@@ -8,4 +8,5 @@ module.exports = {
     '/1dev/sql': require('../1dev/sql/sidebar'),
     '/1dev/git': require('../1dev/git/sidebar'),
     '/1dev/go': require('../1dev/go/sidebar'),
+    '/0secure/test.ctf8': require('../0secure/test.ctf8/sidebar'),
 }
