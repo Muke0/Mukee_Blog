@@ -1,4 +1,4 @@
-# test.ctf8
+# test.ctf8笔记
 地址 https://test.ctf8.com 
 ## level1
 通过修改url参数，发现页面变化。查看网页源代码。可能是在这个位置直接插入提交的参数。 
