@@ -11,7 +11,7 @@ module.exports = {
             {
                 text: '网络安全',
                 items: [{ text: 'pikachu靶场笔记', link: '/0secure/pikachu/' },
-                    { text: '74cms', link: '/0secure/74cms/' },
+                    { text: 'test.ctf8笔记', link: '/0secure/test.ctf8/' },
                 ]
             },
             {
