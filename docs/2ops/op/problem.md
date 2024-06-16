@@ -11,3 +11,7 @@ FAILED:  /usr/lib/dracut/dracut-install -D /var/tmp/dracc ut.oQEgmk/initramfs --
 ```
 add_drivers+=""
 ```
+update-grub2找不到命令,换成
+```
+grub2-mkconfig -o /boot/efi/EFI/openEuler/grub.cfg
+```

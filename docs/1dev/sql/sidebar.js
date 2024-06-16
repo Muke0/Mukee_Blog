@@ -1,4 +1,4 @@
 module.exports = [{
-    title: 'sql命令',
+    title: 'sql语言',
     path: '/1dev/sql/command',
 }, ]
