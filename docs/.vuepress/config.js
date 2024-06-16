@@ -29,6 +29,7 @@ module.exports = {
                     { text: 'shell', link: '/2ops/shell/command.md' },
                     { text: '虚拟机', link: '/2ops/virtual_machine/problem.md' },
                     { text: 'k8s', link: '/2ops/k8s/concept.md' },
+                    { text: 'op', link: '/2ops/op/problem.md' },
                 ]
             },
             {
