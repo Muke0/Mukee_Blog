@@ -10,10 +10,10 @@ module.exports = {
             { text: 'Home', link: '/' },
             {
                 text: '开发相关',
-                items: [{ text: 'sql', link: '/1dev/sql/command' },
+                items: [{ text: 'java', link: '/1dev/java/jvm' },
+                    { text: 'sql', link: '/1dev/sql/command' },
                     { text: 'git', link: '/1dev/git/command' },
                     { text: 'go', link: '/1dev/go/01concept' },
-                    { text: 'java', link: '/1dev/java/jvm' },
                     { text: 'mybatis', link: '/1dev/mybatis/01mybatis' },
                 ]
             },
