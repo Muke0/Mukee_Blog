@@ -10,4 +10,5 @@ module.exports = {
     '/1dev/git': require('../1dev/git/sidebar'),
     '/1dev/go': require('../1dev/go/sidebar'),
     '/1dev/mybatis': require('../1dev/mybatis/sidebar'),
+    '/1dev/netty': require('../1dev/netty/sidebar'),
 }
