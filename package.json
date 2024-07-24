@@ -5,13 +5,18 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "docs:dev":"vuepress dev docs",
-    "docs:build":"vuepress build docs"
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "vuepress": "^1.9.9"
+    "vuepress": "^1.9.9",
+    "vuepress-plugin-mermaidjs": "^1.9.1"
+  },
+  "dependencies": {
+    "@renovamen/vuepress-plugin-mermaid": "^2.0.0-alpha.26",
+    "mermaid": "^8.14.0"
   }
 }

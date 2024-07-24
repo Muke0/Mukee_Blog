@@ -44,7 +44,7 @@ selector 单从字面意思不好理解，需要结合服务器的设计演化�
 
 #### 多线程版设计
 
-```mermaid
+``` mermaid
 graph TD
 subgraph 多线程版
 t1(thread) --> s1(socket1)
@@ -66,7 +66,7 @@ end
 
 #### 线程池版设计
 
-```mermaid
+``` mermaid
 graph TD
 subgraph 线程池版
 t4(thread) --> s4(socket1)
@@ -1172,6 +1172,7 @@ end
 * 让这个线程能够被充分利用
 * 节约了线程的数量
 * 减少了线程上下文切换
+* selector的阻塞实现了多个SocketChannerl的非阻塞，和死循环过度消耗cpu的问题
 
 
 

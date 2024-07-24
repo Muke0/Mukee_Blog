@@ -34,5 +34,8 @@ module.exports = {
         sidebar: require('./sidebar'),
         sidebarDepth: 2,
         lastUpdated: 'Last Updated'
-    }
+    },
+    plugins: [
+        'mermaidjs'
+    ],
 }
