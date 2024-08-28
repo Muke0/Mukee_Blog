@@ -1,17 +1,17 @@
 module.exports = {
+    port: '8086',
     head: [
         ['link', { rel: 'icon', href: '/logo/icon.jpg' }]
     ],
     themeConfig: {
         //base: 1,
-        //port: 8086,
         logo: '/logo/唐海音.jpg',
         nav: [
             { text: 'Home', link: '/' },
             {
                 text: '开发相关',
                 items: [{ text: 'java', link: '/1dev/java/01@Async' },
-                    { text: 'sql', link: '/1dev/sql/command' },
+                    { text: '数据库', link: '/1dev/sql/command' },
                     { text: 'git', link: '/1dev/git/command' },
                     { text: 'netty', link: '/1dev/netty/Netty01-nio' },
                     { text: 'go', link: '/1dev/go/01concept' },
